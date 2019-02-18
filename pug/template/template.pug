@@ -1,0 +1,34 @@
+block config
+    include ../config/config
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title= `${pageTitle} | ${siteTitle}`
+        link(rel="stylesheet", href="css/style.css")
+    body
+        header.main-header
+            .logo-container
+                a(href="/")
+                    img(src="https://ed.team/static/images/logo.svg").logo
+            include ../block/menu
+        .main-banner
+            block banner
+                img(src=`/img/${currentPage}.jpg`).banner-img
+        .main-content
+            main
+                block main
+                    h1= currentPage.toUpperCase()
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis nesciunt dolore sed expedita assumenda veritatis adipisci quam voluptates esse libero corporis eius, provident qui dignissimos error animi, a eum!
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis nesciunt dolore sed expedita assumenda veritatis adipisci quam voluptates esse libero corporis eius, provident qui dignissimos error animi, a eum!
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis nesciunt dolore sed expedita assumenda veritatis adipisci quam voluptates esse libero corporis eius, provident qui dignissimos error animi, a eum!
+            aside.main-sidebar
+                block aside
+                    if currentPage!=='inicio'
+                        include ../block/siguenos
+        footer.main-footer
+            p= `${pageTitle} | ${siteTitle}`
+            block footer

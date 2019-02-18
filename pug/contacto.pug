@@ -1,0 +1,14 @@
+extends template/template
+append config
+    - pageTitle = 'Contacto'
+    - currentPage = 'contacto'
+block main
+    form(action="")
+        fieldset 
+            legend Contactenos
+            fieldset 
+                    legend Nombre y apellidos
+                    input(type="text")
+            fieldset
+                legend Mensaje
+                textarea(name="", cols="30", rows="10")

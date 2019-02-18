@@ -1,0 +1,5 @@
+nav.menu
+    ul
+        each page in pages
+            if page.title!=='Inicio'
+                li: a(href= page.url)= page.title
