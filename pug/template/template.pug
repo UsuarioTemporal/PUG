@@ -9,7 +9,8 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title= `${pageTitle} | ${siteTitle}`
         link(rel="stylesheet", href="css/style.css")
-    body
+        link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+    body(class= currentPage)
         header.main-header
             .logo-container
                 a(href="/")

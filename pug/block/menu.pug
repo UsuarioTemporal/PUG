@@ -1,5 +1,6 @@
 nav.menu
     ul
         each page in pages
+            - page.title.toLowerCase()===currentPage ? active='active' : active=''
             if page.title!=='Inicio'
-                li: a(href= page.url)= page.title
+                li: a(href= page.url class=active)= page.title
