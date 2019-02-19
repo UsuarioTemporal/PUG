@@ -25,10 +25,11 @@ html(lang="en")
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis nesciunt dolore sed expedita assumenda veritatis adipisci quam voluptates esse libero corporis eius, provident qui dignissimos error animi, a eum!
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis nesciunt dolore sed expedita assumenda veritatis adipisci quam voluptates esse libero corporis eius, provident qui dignissimos error animi, a eum!
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque facilis nesciunt dolore sed expedita assumenda veritatis adipisci quam voluptates esse libero corporis eius, provident qui dignissimos error animi, a eum!
-            aside.main-sidebar
-                block aside
-                    if currentPage!=='inicio'
-                        include ../block/siguenos
+            if currentPage!=='inicio'
+                aside.main-sidebar
+                    block aside
+                        if currentPage!=='inicio'
+                            include ../block/siguenos
         footer.main-footer
             p= `${pageTitle} | ${siteTitle}`
             block footer
